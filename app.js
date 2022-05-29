@@ -9,6 +9,6 @@ app.get('/', (req, res) => {
 app.get('/api', (req, res) => {
     res.json({name:"John Doe", email:"johndoe@domainname.com", phone:"9999999999"})
 })
-app.listen(PORT, () => {
+app.listen(process.env.port || 5000, () => {
     console.log(`Application is listning the port ${PORT}`);
 })
